@@ -1,0 +1,364 @@
+
+.prime-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.prime-box {
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.prime-section {
+    padding: 80px 0;
+}
+
+.prime-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.prime-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.prime-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.prime-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.prime-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #0f172a;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.prime-subtitle {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.prime-text {
+    color: #64748b;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.prime-section-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px auto;
+}
+
+.prime-section-desc {
+    color: #64748b;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.prime-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 0.95rem;
+    gap: 8px;
+}
+
+.prime-btn-primary {
+    background-color: #4f46e5;
+    color: #ffffff;
+    border: 1px solid #4f46e5;
+}
+
+.prime-btn-primary:hover { background-color: #3730a3; }
+
+.prime-btn-light {
+    background-color: #ffffff;
+    color: #4f46e5;
+    border: 1px solid #ffffff;
+}
+
+.prime-btn-light:hover { background-color: #f0f9ff; }
+
+.prime-btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.prime-btn-outline:hover { background-color: rgba(255, 255, 255, 0.1); }
+
+
+.prime-aim-section { padding-top: 40px; }
+.prime-aim-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: stretch;
+}
+
+.prime-aim-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.prime-aim-media {
+    padding: 16px;
+    background-color: #f0f9ff;
+    border-color: #bae6fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.prime-aim-img {
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+.prime-card { padding: 32px; }
+.prime-card:hover {
+    transform: translateY(-5px);
+    border-color: #bae6fd;
+}
+
+.prime-card-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #f0f9ff;
+    color: #0284c7;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.prime-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.prime-card-text {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.prime-step-box {
+    padding: 36px;
+    border-left: 4px solid #4f46e5;
+}
+
+.prime-step-number {
+    color: #0284c7;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.prime-step-title {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.prime-step-text {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+.prime-arch-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.prime-arch-visual {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8fafc;
+}
+
+.prime-flow-box {
+    padding: 16px 32px;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #64748b;
+    z-index: 2;
+}
+
+.prime-flow-box.prime-active {
+    border-color: #4f46e5;
+    color: #4f46e5;
+    background: #e0e7ff;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.prime-flow-line {
+    width: 4px;
+    height: 40px;
+    background-color: #cbd5e1;
+    margin: -4px 0;
+    z-index: 1;
+}
+
+.prime-arch-info {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.prime-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.prime-list-item {
+    margin-bottom: 16px;
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.prime-list-item::before {
+    content: '✓';
+    color: #4f46e5;
+    font-weight: 800;
+}
+
+.prime-list-item strong {
+    color: #0f172a;
+}
+
+
+.prime-metrics-spacing { margin-bottom: 40px; }
+
+.prime-stat-box {
+    padding: 36px;
+    text-align: center;
+}
+
+.prime-stat-num {
+    display: block;
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: #4f46e5;
+    margin-bottom: 8px;
+}
+
+.prime-stat-label {
+    font-size: 1.1rem;
+    color: #0f172a;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.prime-stat-desc {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+
+.prime-cta-banner {
+    background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+    padding: 60px 40px;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+}
+
+.prime-cta-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    font-weight: 800;
+}
+
+.prime-cta-text {
+    max-width: 600px;
+    margin: 0 auto 32px auto;
+    color: #e0e7ff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.prime-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+
+@media (max-width: 1024px) {
+    .prime-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .prime-aim-grid,
+    .prime-arch-grid,
+    .prime-grid-3,
+    .prime-grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .prime-title { font-size: 2rem; }
+    .prime-subtitle { font-size: 1.6rem; }
+    
+    .prime-cta-banner {
+        padding: 40px 20px;
+    }
+}

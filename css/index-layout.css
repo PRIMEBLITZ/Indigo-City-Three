@@ -1,0 +1,397 @@
+body {
+    background-color: #f4f7f6;
+}
+
+/* Base Section with Overlay Background */
+.prime-hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                url('../img1/b3.jpg') no-repeat center center/cover;
+    overflow: hidden;
+}
+
+/* Layout Wrapper */
+.prime-hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+/* Top Blue Badge Box */
+.prime-badge-box {
+    background-color: #00bfff;
+    padding: 0.85rem 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+    align-self: center;
+
+}
+
+.prime-badge-text {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+}
+
+/* Main Grey Body Card */
+.prime-hero-card {
+    background-color: rgba(60, 64, 67, 0.92);
+    padding: 2.5rem 3rem;
+    max-width: 480px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    align-self: center;
+}
+
+/* Inner Text Area */
+.prime-hero-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.prime-hero-title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.prime-hero-subtitle {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.prime-hero-description {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.1;
+}
+
+/* Action Button Container */
+.prime-hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    align-self: center;
+
+}
+
+/* Base Button Styles */
+.prime-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+    background-color: #00bfff;
+    color: #111111;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.prime-btn:hover {
+    background-color: #009acd;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+}
+
+/* Responsiveness for Mobile & Tablets */
+@media (max-width: 768px) {
+    .prime-hero {
+        padding: 2rem 1rem;
+        min-height: auto;
+    }
+
+    .prime-hero-card {
+        padding: 1.75rem 1.5rem;
+        max-width: 100%;
+    }
+
+    .prime-hero-title,
+    .prime-hero-subtitle,
+    .prime-hero-description {
+        font-size: 1.75rem;
+    }
+
+    .prime-hero-actions {
+        width: 100%;
+    }
+
+    .prime-badge-box {
+        width: 100%;
+    }
+}
+
+.comparison-preview-section {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: #fdfdfd;
+    border-top: 1px solid rgba(0, 191, 255, 0.15);
+}
+
+.comparison-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.comparison-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.comparison-badge {
+    background: rgba(0, 191, 255, 0.1);
+    color: #00bfff;
+    border: 1px solid #00bfff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.3rem 0.85rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+.comparison-header h2 { color: #111111; font-size: 2.2rem; font-weight: 800; margin: 0; }
+.comparison-header p { color: #666666; font-size: 1rem; margin: 0; }
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.comparison-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 191, 255, 0.2);
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.comparison-card:hover { transform: translateY(-4px); border-color: #00bfff; }
+
+.comparison-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: 0.75rem;
+}
+
+.comparison-card-header h3 { color: #222222; font-size: 1.25rem; font-weight: 700; margin: 0; }
+
+.diff-tag {
+    font-size: 0.75rem;
+    color: #ffc107;
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.comparison-card-body { display: flex; align-items: center; gap: 1rem; }
+.compare-side { flex: 1; display: flex; flex-direction: column; gap: 0.4rem; }
+
+.prime-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none !important;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.prime-btn-primary {
+    background-color: #00bfff;
+    color: #ffffff !important;
+    border: 1px solid #00bfff;
+}
+
+.prime-btn-primary:hover {
+    background-color: #009acd;
+    color: #ffffff !important;
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.prime-btn-secondary {
+    background-color: transparent;
+    color: #333333 !important;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.prime-btn-secondary:hover {
+    border-color: #00bfff;
+    color: #00bfff !important;
+    transform: translateY(-2px);
+}
+
+.side-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.comic-side .side-label { color: #00bfff; }
+.show-side .side-label { color: #3b82f6; }
+
+.compare-side p { color: #555555; font-size: 0.88rem; line-height: 1.5; margin: 0; }
+
+.compare-divider {
+    font-weight: 900;
+    font-size: 0.8rem;
+    color: #888888;
+    background: #f0f0f0;
+    padding: 0.4rem 0.6rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.comparison-footer { text-align: center; }
+
+@media (max-width: 600px) {
+    .comparison-preview-section { padding: 2.5rem 1rem; }
+    .comparison-card-body { flex-direction: column; align-items: flex-start; }
+    .compare-divider { align-self: center; margin: 0.25rem 0; }
+    .comparison-header h2 { font-size: 1.7rem; }
+}
+
+.variants-section { width: 100%; padding: 4rem 2rem; background-color: #f4f7f6; }
+.variants-container { max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.5rem; }
+
+.variants-header { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+.variants-badge {
+    background: rgba(0, 191, 255, 0.1);
+    color: #00bfff;
+    border: 1px solid #00bfff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+.variants-header h2 { color: #111111; font-size: 2.2rem; font-weight: 800; }
+.variants-header p { color: #555555; font-size: 1rem; max-width: 600px; }
+
+.variants-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1.5rem; 
+}
+
+/* Responsive breakdowns for tablet and mobile screens */
+@media (max-width: 992px) { 
+    .variants-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1.25rem; 
+    } 
+}
+
+@media (max-width: 600px) {
+    .variants-section { padding: 2.5rem 1rem; }
+    .variants-grid { grid-template-columns: 1fr; gap: 0.85rem; }
+    .variant-img-box { height: 180px; }
+    .variant-info { padding: 0.75rem; flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+    .variant-info h3 { font-size: 0.85rem; }
+}
+
+.variant-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 191, 255, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.variant-card:hover {
+    transform: translateY(-6px);
+    border-color: #00bfff;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+}
+
+.variant-img-box { width: 100%; height: 260px; background: #f0f0f0; overflow: hidden; }
+
+.variant-info {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fdfdfd;
+}
+
+.variant-info h3 {
+    color: #222222;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.variant-tag {
+    font-size: 0.75rem;
+    color: #00bfff;
+    background: rgba(0, 191, 255, 0.15);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+@media (max-width: 992px) { .variants-grid { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; } }
+@media (max-width: 600px) {
+    .variants-section { padding: 2.5rem 1rem; }
+    .variants-grid { grid-template-columns: repeat(2, 1fr); gap: 0.85rem; }
+    .variant-img-box { height: 180px; }
+    .variant-info { padding: 0.75rem; flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+    .variant-info h3 { font-size: 0.85rem; }
+}
+
