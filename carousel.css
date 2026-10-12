@@ -1,0 +1,683 @@
+/* ============================================================
+   LIGHT & BLUE THEME - ABOUT CAROUSEL STYLES
+   ============================================================ */
+
+/* About Section Outer Background */
+.about-section {
+  background-color: #f4f8fc;
+}
+
+/* Container Grid Setup */
+.about-container { 
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 40px; 
+  max-width: 1100px; 
+  width: 100%; 
+  align-items: center; 
+}
+
+/* Image & Profile Frame Styling */
+.custom-border-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 260px; /* Reduced from 350px/400px */
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 1. Avatar Image */
+.profile-img {
+  position: absolute;
+  width: 70%;       /* Adjust this % if image corners bleed out of frame */
+  height: 60%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* 2. Border Frame Overlay */
+.border-overlay {
+  position: absolute;
+  inset: 0;
+  width: 120%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+/* Content Card & Light Theme Typography */
+.content-card { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 15px; 
+  padding: 20px; 
+}
+
+.sub-heading { 
+  color: #0d6efd; 
+  font-weight: 700; 
+  font-size: 0.9rem; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+}
+
+.content-card h2 { 
+  font-size: 2.25rem; 
+  color: #0f172a; 
+  margin: 0;
+}
+
+.content-card p { 
+  color: #475569; 
+  line-height: 1.6; 
+  font-size: 1.05rem; 
+  margin: 0;
+}
+
+/* CTA Button */
+.cta-btn {
+  align-self: flex-start;
+  padding: 12px 30px;
+  background-color: #0d6efd;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.25);
+}
+
+.cta-btn:hover {
+  background-color: #0b5ed7;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(13, 110, 253, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Responsive Desktop Layout */
+@media (min-width: 768px) {
+  .about-container { 
+    grid-template-columns: 45% 55%; 
+    gap: 50px; 
+  }
+  .content-card { 
+    padding: 0; 
+  }
+}
+
+@media (min-width: 1024px) { 
+  .content-card h2 { 
+    font-size: 2.75rem; 
+  } 
+}
+
+/* Carousel Container Padding (Provides space for arrow buttons on small screens) */
+#aboutCarousel {
+  position: relative;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  #aboutCarousel {
+    padding: 0 2.5rem;
+  }
+}
+
+/* Navigation Arrow Controls (Visible on Mobile, Tablet & Desktop) */
+.about-ctrl-btn {
+  width: 42px;
+  height: 42px;
+  background-color: #ffffff;
+  border: 1px solid #0d6efd;
+  border-radius: 50%;
+  top: 50%;
+  bottom: auto; /* Overrides Bootstrap default height stretching */
+  transform: translateY(-50%);
+  opacity: 1;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Icon Color Filter for Light Background */
+.about-ctrl-btn .carousel-control-prev-icon,
+.about-ctrl-btn .carousel-control-next-icon {
+  width: 1rem;
+  height: 1rem;
+  filter: invert(27%) sepia(98%) saturate(1800%) hue-rotate(210deg) brightness(95%) contrast(100%);
+  transition: filter 0.3s ease;
+}
+
+.about-ctrl-btn:hover {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  box-shadow: 0 4px 14px rgba(13, 110, 253, 0.35);
+}
+
+.about-ctrl-btn:hover .carousel-control-prev-icon,
+.about-ctrl-btn:hover .carousel-control-next-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Control Positioning across Viewports */
+.about-ctrl-btn.carousel-control-prev { left: -5px; }
+.about-ctrl-btn.carousel-control-next { right: -5px; }
+
+@media (min-width: 992px) {
+  .about-ctrl-btn.carousel-control-prev { left: -25px; }
+  .about-ctrl-btn.carousel-control-next { right: -25px; }
+}
+
+/* Indicators (Dots) */
+.custom-indicators { 
+  position: relative; 
+  margin-top: 2rem; 
+}
+
+.custom-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(13, 110, 253, 0.25);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.custom-indicators .active { 
+  width: 28px; 
+  border-radius: 10px; 
+  background-color: #0d6efd; 
+}
+
+.prime-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.prime-box {
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.prime-section {
+    padding: 80px 0;
+}
+
+.prime-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.prime-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.prime-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.prime-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* ==========================================
+   TYPOGRAPHY, HEADINGS & UTILITIES
+   ========================================== */
+.prime-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.prime-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #0f172a;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.prime-subtitle {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.prime-text {
+    color: #64748b;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.prime-section-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px auto;
+}
+
+.prime-section-desc {
+    color: #64748b;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+.prime-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 0.95rem;
+    gap: 8px;
+}
+
+.prime-btn-primary {
+    background-color: #4f46e5;
+    color: #ffffff;
+    border: 1px solid #4f46e5;
+}
+
+.prime-btn-primary:hover { background-color: #3730a3; }
+
+.prime-btn-light {
+    background-color: #ffffff;
+    color: #4f46e5;
+    border: 1px solid #ffffff;
+}
+
+.prime-btn-light:hover { background-color: #f0f9ff; }
+
+.prime-btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.prime-btn-outline:hover { background-color: rgba(255, 255, 255, 0.1); }
+
+/* ==========================================
+   AIM HERO SECTION
+   ========================================== */
+.prime-aim-section { padding-top: 40px; }
+.prime-aim-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: stretch;
+}
+
+.prime-aim-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.prime-aim-media {
+    padding: 16px;
+    background-color: #f0f9ff;
+    border-color: #bae6fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.prime-aim-img {
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* ==========================================
+   ABOUT US SPECIFIC STYLES
+   ========================================== */
+.about-hero-section {
+    padding-top: 60px;
+    background-color: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.about-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.about-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-hero-media {
+    padding: 16px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100%;
+}
+
+.about-mv-section {
+    background-color: #ffffff;
+}
+
+.about-mv-card {
+    padding: 40px;
+    height: 100%;
+    border-top: 4px solid #4f46e5;
+}
+
+.about-stats-banner {
+    padding: 50px 30px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border-radius: 16px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #4f46e5;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==========================================
+   CARDS & PIPELINE STEPS
+   ========================================== */
+.prime-card { padding: 32px; }
+.prime-card:hover {
+    transform: translateY(-5px);
+    border-color: #bae6fd;
+}
+
+.prime-card-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #f0f9ff;
+    color: #0284c7;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.prime-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.prime-card-text {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.prime-step-box {
+    padding: 36px;
+    border-left: 4px solid #4f46e5;
+}
+
+.prime-step-number {
+    color: #0284c7;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.prime-step-title {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.prime-step-text {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   ARCHITECTURE SECTION
+   ========================================== */
+.prime-arch-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.prime-arch-visual {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8fafc;
+}
+
+.prime-flow-box {
+    padding: 16px 32px;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #64748b;
+    z-index: 2;
+}
+
+.prime-flow-box.prime-active {
+    border-color: #4f46e5;
+    color: #4f46e5;
+    background: #e0e7ff;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.prime-flow-line {
+    width: 4px;
+    height: 40px;
+    background-color: #cbd5e1;
+    margin: -4px 0;
+    z-index: 1;
+}
+
+.prime-arch-info {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.prime-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.prime-list-item {
+    margin-bottom: 16px;
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.prime-list-item::before {
+    content: '✓';
+    color: #4f46e5;
+    font-weight: 800;
+}
+
+.prime-list-item strong {
+    color: #0f172a;
+}
+
+/* ==========================================
+   METRICS SECTION
+   ========================================== */
+.prime-metrics-spacing { margin-bottom: 40px; }
+
+.prime-stat-box {
+    padding: 36px;
+    text-align: center;
+}
+
+.prime-stat-num {
+    display: block;
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: #4f46e5;
+    margin-bottom: 8px;
+}
+
+.prime-stat-label {
+    font-size: 1.1rem;
+    color: #0f172a;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.prime-stat-desc {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   CTA SECTION
+   ========================================== */
+.prime-cta-banner {
+    background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+    padding: 60px 40px;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    border-radius: 16px;
+}
+
+.prime-cta-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    font-weight: 800;
+}
+
+.prime-cta-text {
+    max-width: 600px;
+    margin: 0 auto 32px auto;
+    color: #e0e7ff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.prime-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (COMBINED)
+   ========================================== */
+@media (max-width: 1024px) {
+    .prime-grid-4,
+    .about-stats-banner .prime-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .prime-aim-grid,
+    .prime-arch-grid,
+    .prime-grid-3,
+    .prime-grid-4,
+    .about-hero-grid,
+    .prime-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero-grid { gap: 32px; }
+    .about-hero-section { padding-top: 40px; }
+
+    .prime-title { font-size: 2rem; }
+    .prime-subtitle { font-size: 1.6rem; }
+    .stat-number { font-size: 2.5rem; }
+    
+    .prime-cta-banner,
+    .about-stats-banner {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-stats-banner .prime-grid-4 {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}

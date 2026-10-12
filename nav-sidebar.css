@@ -1,0 +1,830 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+:root {
+    color-scheme: light;
+}
+
+html, body {
+    width: 100%;
+    min-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Width of the vertical scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Background of the scrollbar track */
+::-webkit-rio-scrollbar-track,
+::-webkit-scrollbar-track {
+  background: #069cf3;
+}
+
+/* The draggable scrollbar handle (thumb) */
+::-webkit-scrollbar-thumb {
+  background: #fdfdfd;
+  border-radius: 6px;
+}
+
+/* Handle color on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f1f4f6;
+}
+
+
+#chrome-like-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;          /* Match Chrome's thin line thickness */
+  background: #1a73e8;  /* Exact Google Chrome UI blue color */
+  z-index: 999999;      /* Stays completely on top of your site */
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+html:has(#sidebar-toggle:checked) body {
+    overflow: hidden;
+    height: 100vh;
+}
+
+#sidebar-toggle {
+    display: none;
+}
+
+/* Navbar */
+.prime-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-bottom: 2px solid #00bfff;
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.08);
+    padding: 0 2rem;
+    height: 72px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.prime-navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 3px;
+    background: linear-gradient(
+        90deg, 
+        #0497ec, 
+        #fcf9f946, 
+        #eeecec6f
+    );
+    background-size: 50% 100%;
+    animation: navBorderSlide 3s linear infinite;
+}
+
+@keyframes navBorderSlide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Logo - Clean & Slightly Bigger */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo img {
+    width: 206px;
+    height: 76px;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.logo span {
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #111111;
+}
+
+/* Clean Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border: 3px solid #0998df;
+    border-radius: 6px;
+    padding: 7px 12px;
+    width: 200px;
+    transition: all 0.2s ease;
+    z-index: 9000;
+    margin-right: 1rem;
+}
+
+.search-box:focus-within {
+    border-color: #00bfff;
+    background-color: #ffffff;
+    box-shadow: 0 0 6px rgba(0, 191, 255, 0.2);
+    z-index: 2000;
+    width: 820px;
+        clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 0.85rem;
+    color: #333333;
+}
+
+.search-box button {
+    border: none;
+    background: transparent;
+    color: #555555;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.desktop-search { display: flex; }
+
+.prime-navbar .desktop-menu {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu Tabs - Parallelogram Shape with Smooth Hover Animation */
+.prime-navbar .desktop-menu > li > a {
+    position: relative;
+    text-decoration: none;
+    color: #444444;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    padding: 0.6rem 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: #f8f9fa;
+    clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Animated bottom highlight bar on hover/active */
+.prime-navbar .desktop-menu > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #00bfff;
+    transition: width 0.25s ease;
+}
+
+.prime-navbar .desktop-menu > li > a:hover::after,
+.prime-navbar .desktop-menu > li > a.active::after {
+    width: 70%;
+}
+
+.prime-navbar .desktop-menu > li > a:hover {
+    background: rgba(0, 191, 255, 0.12);
+    color: #00bfff;
+    transform: translateY(-2px);
+}
+
+.prime-navbar .desktop-menu > li > a.active {
+    color: #ffffff !important;
+    background: #00bfff !important;
+}
+
+/* ==========================================
+   DESKTOP DROPDOWN (Fully Visible)
+   ========================================== */
+.prime-dropdown { 
+    position: relative; 
+}
+
+.prime-dropdown-content {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+    background: #ffffff;
+    min-width: 180px;
+    border-radius: 6px;
+    border: 1px solid #00bfff;
+    box-shadow: 0 10px 20px rgba(0, 191, 255, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    list-style: none;
+    padding: 6px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 9999;
+}
+
+.prime-dropdown:hover .prime-dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.prime-dropdown-content li a {
+    display: flex;
+    align-items: center;
+    height: 34px;
+    padding: 0 1rem;
+    text-decoration: none;
+    color: #333333;
+    font-size: 0.85rem;
+    font-weight: 500;
+    clip-path: none !important;
+    background: transparent !important;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.prime-dropdown-content li a:hover {
+    background-color: #00bfff !important;
+    color: #ffffff !important;
+    padding-left: 1.25rem;
+}
+
+.prime-dropdown-content li a.drop-active {
+    background-color: #00bfff !important;
+    color: #ffffff !important;
+}
+
+/* Desktop Auth Button - 100% Borderless & Background-free Icon */
+.auth-trigger-btn {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    color: #333333;
+    cursor: pointer;
+    padding: 6px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.auth-trigger-btn:hover {
+    background: transparent !important;
+    color: #00bfff;
+    transform: scale(1.1);
+}
+
+.open-btn {
+    display: none;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background: #111111;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 0.4rem 0.8rem;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    z-index: 1500;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* ==========================================
+   MOBILE SIDEBAR & DROPDOWN WITH ARROW ICON
+   ========================================== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 99999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #00bfff;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+}
+
+.close-btn {
+    font-size: 1rem;
+    color: #ffffff;
+    background: #111111;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background: #00bfff;
+}
+
+.mobile-search { display: none; }
+
+.sidebar-nav {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.sidebar-nav > a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.6rem 1rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-nav > a:hover,
+.sidebar-nav > a.active {
+    background: #00bfff;
+    color: #ffffff;
+}
+
+/* Mobile Dropdown with visible arrow icon indicator */
+details.mobile-dropdown {
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+details.mobile-dropdown summary {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #333333;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+}
+
+details.mobile-dropdown summary::-webkit-details-marker { display: none !important; }
+
+/* Custom arrow icon that rotates when open */
+details.mobile-dropdown summary::after {
+    content: '▼';
+    font-size: 0.7rem;
+    color: #00bfff;
+    transition: transform 0.3s ease;
+}
+
+details.mobile-dropdown[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-content {
+    padding: 0.2rem 1rem 0.6rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.mobile-dropdown-content a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    background: #ffffff;
+    color: #444444;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.mobile-dropdown-content a:hover,
+.mobile-dropdown-content a.drop-active {
+    background: #00bfff;
+    color: #ffffff;
+}
+
+/* Mobile Sidebar Sign In / Sign Up Footer Container */
+.sidebar-auth {
+    padding: 1.2rem 1.5rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.sidebar-auth a {
+    flex: 1;
+    text-align: center;
+    padding: 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-signin {
+    background: #f8f9fa;
+    color: #333333;
+    border: 1px solid #dcdcdc;
+}
+
+.sidebar-signin:hover {
+    background: #e9ecef;
+}
+
+.sidebar-signup {
+    background: #00bfff;
+    color: #ffffff;
+}
+
+.sidebar-signup:hover {
+    background: #009acd;
+}
+
+#sidebar-toggle:checked ~ .sidebar { transform: translateX(0); }
+#sidebar-toggle:checked ~ .overlay { opacity: 1; visibility: visible; }
+
+@media (max-width: 1024px) {
+    .prime-navbar {
+        padding: 0 1rem;
+        height: 66px;
+    }
+    .prime-navbar .desktop-menu, .desktop-search, .auth-container { display: none !important; }
+    .open-btn { display: block !important; }
+    .mobile-search {
+        display: flex !important;
+        width: 100%;
+        margin-bottom: 0.8rem;
+        background: #f8f9fa;
+        border-radius: 6px;
+        padding: 4px 10px;
+    }
+    .mobile-search input {
+        border: none;
+        background: transparent;
+        width: 100%;
+        outline: none;
+        padding: 6px;
+    }
+
+    .mobile-search:focus-within {
+        border: 1px solid #00bfff;
+        background-color: #ffffff;
+        box-shadow: 0 0 6px rgba(0, 191, 255, 0.2);
+        height: auto;
+    }
+
+    .mobile-search {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 6px 12px;
+    width: 200px;
+    transition: all 0.2s ease;
+    z-index: 9000;
+}
+
+.mobile-search:focus-within {
+    border-color: #00bfff;
+    background-color: #ffffff;
+    box-shadow: 0 0 6px rgba(0, 191, 255, 0.2);
+    z-index: 2000;
+}
+
+.mobile-search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 0.85rem;
+    color: #333333;
+}
+
+.mobile-search button {
+    border: none;
+    background: transparent;
+    color: #555555;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+}
+.mobile-auth {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: #0894f1;
+    font-size: 2rem; 
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+
+
+.drop-active,
+.prime-dropdown.active,
+.mobile-dropdown[open] {
+    position: relative;
+    background-color: #f0f4ff; /* Light accent background */
+    border: 2px dashed #0056b3; /* Primary focus border */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.15);
+    transition: all 0.25s ease-in-out;
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Drop-Active Text & Icon Highlights */
+.drop-active > a,
+.drop-active > summary,
+.drop-active .side-label {
+    color: #0056b3 !important;
+    font-weight: 600;
+}
+
+/* Active Dropdown Menu Visibility */
+.drop-active .prime-dropdown-content,
+.drop-active .mobile-dropdown-content {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    animation: fadeInDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulse animation for interactive drag-and-drop zones */
+.drop-active.drag-over {
+    background-color: #e3edff;
+    border-color: #004085;
+    animation: dropPulse 1.5s infinite alternate;
+}
+
+@keyframes dropPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 86, 179, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 0 10px rgba(0, 86, 179, 0);
+    }
+}
+
+
+
+/* Mobile & Touch Devices (Max Width 768px) */
+@media (max-width: 768px) {
+    .drop-active,
+    .mobile-dropdown[open] {
+        border-width: 1.5px;
+        border-style: solid; /* Solid border for mobile touch clarity */
+        margin: 6px 0;
+        padding: 4px;
+        transform: none; /* Disable transform lift on touch screens */
+    }
+
+    .drop-active .mobile-dropdown-content {
+        padding-left: 12px;
+        border-left: 2px solid #0056b3;
+    }
+}
+
+/* Accessibility Focus States (Keyboard Navigation) */
+.drop-active:focus-within {
+    outline: 3px solid rgba(0, 86, 179, 0.5);
+    outline-offset: 2px;
+}
+
+/* Subtle logo tilt on hover */
+.logo {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.logo:hover {
+    transform: scale(1.04) rotate(-1deg);
+}
+
+/* Smooth arrow flip on hover */
+.prime-navbar .desktop-menu .fa-angle-down {
+    transition: transform 0.3s ease;
+}
+.prime-dropdown:hover .fa-angle-down {
+    transform: rotate(180deg);
+    color: var(--primary-cyan);
+}
+
+.prime-dropdown-content {
+    /* Initial state (hidden, slightly shifted down and smaller) */
+    transform: translateX(-50%) translateY(15px) scale(0.95);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(0, 191, 255, 0.3);
+    box-shadow: 0 12px 30px rgba(0, 191, 255, 0.2);
+}
+
+/* Hover state (smoothly scales up and slides up) */
+.prime-dropdown:hover .prime-dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.search-box {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.search-box:focus-within {
+    border-color: var(--primary-cyan);
+    background-color: #ffffff;
+    box-shadow: 0 0 15px var(--glow-shadow);
+    width:700x;
+}
+
+/* Animated Gradient Border for Mobile Sidebar */
+.sidebar {
+    border-left: none !important; /* Remove static border */
+    position: fixed;
+}
+
+.sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 880%;
+    background: linear-gradient(
+        180deg, 
+        #00bfff, 
+        #00bfff00
+    );
+    background-size: 100% 200%;
+    animation: sidebarBorderGlow 3s linear infinite;
+    z-index: 10;
+}
+
+@keyframes sidebarBorderGlow {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 0% 150%; }
+
+    100% { background-position: 0% 200%; }
+}
+
+/* Cascading Entrance Animation for Mobile Links */
+#sidebar-toggle:checked ~ .sidebar .sidebar-nav > * {
+    animation: sidebarItemSlide 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+/* Stagger delays for each link */
+#sidebar-toggle:checked ~ .sidebar .sidebar-nav > *:nth-child(1) { animation-delay: 0.1s; }
+#sidebar-toggle:checked ~ .sidebar .sidebar-nav > *:nth-child(2) { animation-delay: 0.15s; }
+#sidebar-toggle:checked ~ .sidebar .sidebar-nav > *:nth-child(3) { animation-delay: 0.2s; }
+#sidebar-toggle:checked ~ .sidebar .sidebar-nav > *:nth-child(4) { animation-delay: 0.25s; }
+#sidebar-toggle:checked ~ .sidebar .sidebar-nav > *:nth-child(5) { animation-delay: 0.3s; }
+
+@keyframes sidebarItemSlide {
+    from {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.close-btn {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.25s ease;
+}
+
+.close-btn:hover {
+    background: #00bfff;
+    transform: rotate(180deg) scale(1.15);
+    box-shadow: 0 0 12px rgba(0, 191, 255, 0.6);
+}
+
+.close-btn:active {
+    transform: rotate(180deg) scale(0.95);
+}
+
+.sidebar-nav > a {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Active indicator accent bar */
+.sidebar-nav > a.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 70%;
+    background: #ffffff;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+.sidebar {
+    /* Smooth overshoot bounce curve */
+    transition: transform 0.45s cubic-bezier(0.25, 1.25, 0.5, 1) !important;
+}
+
+/* Prevent menu items from shrinking when multiple dropdowns expand */
+.sidebar-nav > * {
+    flex-shrink: 0;
+}
+
+details.mobile-dropdown {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.mobile-dropdown-content a {
+    flex-shrink: 0;
+}
+
+details.mobile-dropdown summary::after {
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+}
+
