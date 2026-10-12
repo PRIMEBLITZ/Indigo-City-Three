@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDIGO CITY 3 | Home</title>
+<!-- ----------------------Link---------------------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- -----------------------------------CSS---------------------------- -->
+    <link rel="stylesheet" href="css/nav-sidebar.css">
+    <link rel="stylesheet" href="css/sign-in-up.css">
+    <link rel="stylesheet" href="css/index-layout.css">
+    <link rel="stylesheet" href="extra-css/back-to-top.css">
+    <link rel="stylesheet" href="extra-css/faq.css">
+    <link rel="stylesheet" href="extra-css/feedback.css">
+    <link rel="stylesheet" href="css/footer.css">
+<!-- ---------------------------------------Web Fav Icon--------------------- -->
+    <link rel="shortcut icon" href="img1/id_circle.webp" type="image/x-icon">
+</head>
+
+
+<!-- ------------------------------Start of Main----------------------------------- -->
+
+<body id="top">
+<!-- ------------------------------start of laptop nav bar------------------------------------------- -->
+     <input type="checkbox" id="sidebar-toggle">
+    <label for="sidebar-toggle" class="overlay"></label>
+    <header class="prime-navbar">
+
+        <!-- ----------------------------logo--------------------------------- -->
+        <a href="index.html" class="logo">
+            <img src="img1/id3_text.webp" alt="Prime Blitz logo" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
+            <!-- <span class="brand-name">Prime Blitz</span> -->
+        </a>
+        <!-- --------------------------end of logo------------------------------ -->
+
+        <!-------------------------------- Desktop Search Bar---------------------------------- -->
+        <form action="#" method="GET" class="search-box desktop-search">
+            <input type="search" placeholder="Search..." name="search" required>
+            <button type="submit" aria-label="Submit Search Query">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <!-- -------------------------------end of desktop search bar-------------------------- -->
+
+        <!-- ----------------------------Desktop Navigation Links ------------------------------>
+         <ul class="desktop-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li class="prime-dropdown">
+                <a> Solutions<i class="fa-solid fa-angle-down"></i></a>
+                <ul class="prime-dropdown-content">
+                    <li><a href="5.solutions-hybrid.html">Solution-1</a></li>
+                    <li><a href="6.solutions-accessibility.html">Solution-2</a></li>
+                    <li><a href="7.solutions-language.html">Solution-3</a></li>
+                    <li><a href="8.solutions-website.html">Solution-4</a></li>
+                    
+                </ul>
+            </li>
+            <li class="prime-dropdown">
+                <a>Problems <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="prime-dropdown-content">
+                    <li><a href="1.problems-elderly.html">Problem-1</a></li>
+                    <li><a href="2.problems-disability.html">Problem-2</a></li>
+                    <li><a href="3.problems-lip.html">Problem-3</a></li>
+                    <li><a href="4.problems-digital.html">Problem-4</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="aim.html">Aim</a></li>
+
+        </ul>
+          <!-- -----------------------------------end of desktop navi link---------------------- -->
+
+        <!-- -----------------------Top Right Nav Auth Trigger Icon (Desktop)--------------------- -->
+        <div class="auth-container">
+            <button commandfor="auth-overlay-panel" command="show-popover" class="auth-trigger-btn" title="Log In / Sign Up">
+                <i class="fa-solid fa-circle-user" style="font-size: 2.2rem;"></i>
+            </button>
+        </div>
+        <!-- -------------------------End of Top Right Nav Auth Trigger ------------------------------>
+
+        <!-- ---------------------Hamburger Icon Menu Trigger (Mobile)------------------------ -->
+        <label for="sidebar-toggle" class="open-btn" aria-label="Open Mobile Menu Drawer">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <!-- ----------------------------End of Ham Icon------------------------------------------ -->
+    </header>
+   <!-- --------------------------------end of laptop nav view--------------------------------- -->
+
+
+
+   <!---------------------- -------------Mobile Drawer Sidebar---------------------- -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <label for="sidebar-toggle" class="close-btn" aria-label="Close Mobile Menu Drawer">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+ <button commandfor="auth-overlay-panel" command="show-popover" class="mobile-auth sidebar-auth-trigger" title="Log In / Sign Up">
+                <i class="fa-solid fa-circle-user" style="font-size: 2.8rem;"></i>
+            </button>
+            <!-- ----------------------Mobile Sign IN | UP ------------------------------ -->
+         
+        </div>
+        
+        <!-- ----------------------------Mobile Search Bar -------------------------->
+        <form action="#" method="GET" class="mobile-search">
+            <input type="search" placeholder="Search website..." name="search" required>
+            <button type="submit" aria-label="Submit Search Query">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <!------------------------------ Mobile Drawer Navigation Links----------------------------- -->
+        <header class="sidebar-nav">
+            <a href="index.html" class="active">Home</a>
+            <details class="mobile-dropdown">
+                <summary>Solutions</summary>
+                <div class="mobile-dropdown-content">
+                    <a href="5.solutions-hybrid.html">Solution-2</a>
+                     <a href="6.solutions-accessibility.html">Solution-2</a>
+                    <a href="7.solutions-language.html">Solution-2</a>
+
+                     <a href="8.solutions-website.html">Solution-2</a>
+   
+                </div>
+            </details>
+
+            <details class="mobile-dropdown">
+                <summary>Problems</summary>
+                <div class="mobile-dropdown-content">
+                    <a href="1.problems-elderly.html">Problem-1</a>
+                    <a href="2.problems-disability.html">Problem-2</a>
+                    <a href="3.problems-lip.html">Problem-3</a>
+                    <a href="4.problems-digital.html">Problem-4</a>
+                </div>
+            </details>
+
+            <a href="about.html">About</a>
+            <a href="aim.html">Aim</a>
+
+          
+        </header>
+    </aside>
+
+<!-- ---------------------------------------------End of mobile nav aka side bar-------------------------------------- -->
+
+
+<!----------------------------------------- start of sign in up--------------------------------------------------------------- -->
+ 
+    <main id="auth-overlay-panel" popover class="auth-page-wrapper">
+        
+        <button popovertarget="auth-overlay-panel" popovertargetaction="hide" class="modal-close-cross" aria-label="Close Authentication Panel">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Hidden Checkbox for Form Switch Slide Animation Toggle -->
+        <input type="checkbox" id="auth-panel-switcher" class="auth-toggle-trigger">
+        
+        <div class="auth-display-card">
+            
+            <div class="auth-forms-holder">
+                
+                <!-- Registration  Sign Up Form Panel  -->
+                <form action="#" method="get" class="auth-form-column side-signup">
+                    <div class="form-content-wrapper">
+                        <h1 class="auth-heading">Create Account</h1>
+                        <p class="auth-lead">Register an email for Prime-Blitz</p>
+                        
+                        <div class="auth-core-form">
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Full Name</label>
+                                <input type="text" placeholder="Your name" required autocomplete="name">
+                            </div>
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Email Address</label>
+                                <input type="email" placeholder="name@example.com" required autocomplete="email">
+                            </div>
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Password</label>
+                                <input type="password" placeholder="Create strong password" required autocomplete="new-password">
+                            </div>
+                            <button type="submit" class="auth-btn btn-dark">Sign Up</button>
+                        </div>
+                        
+                        <!-- Mobile Responsive Alternative Switch Trigger Link -->
+                        <div class="auth-mobile-switch-notice">
+                            <p>Already have an account? <label for="auth-panel-switcher" class="auth-action-link">Sign In</label></p>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Session Authentication Sign In Form Panel -->
+                <form action="#" method="get" class="auth-form-column side-signin">
+                    <div class="form-content-wrapper">
+                        <h1 class="auth-heading">Welcome Back</h1>
+                        <p class="auth-lead">Sign in to your account to access your workspace portal.</p>
+                        
+                        <div class="auth-core-form">
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Email Address</label>
+                                <input type="email" placeholder="name@example.com" required autocomplete="email">
+                            </div>
+                            <div class="auth-input-row">
+                                <div class="auth-label-split">
+                                    <label class="auth-field-label">Password</label>
+                                    <a href="#" class="auth-inline-link">Forgot password?</a>
+                                </div>
+                                <input type="password" placeholder="Enter your password" required autocomplete="current-password">
+                            </div>
+                            <button type="submit" class="auth-btn btn-blue">Sign In</button>
+                        </div>
+                        
+                        <!-- Mobile Responsive Alternative Switch Trigger Link -->
+                        <div class="auth-mobile-switch-notice">
+                            <p>Don't have an account? <label for="auth-panel-switcher" class="auth-action-link">Sign Up</label></p>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <!-- Sliding Desktop Interactive Visual Curtain Panel Layer -->
+            <div class="auth-overlay-curtain">
+                <div class="auth-curtain-inner">
+                    
+                    <!-- Left Slide Text Message Area Component -->
+                    <div class="curtain-message curtain-msg-left">
+                        <h2>Prime blitz</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                        <label for="auth-panel-switcher" class="curtain-toggle-btn">Go To Sign Up</label>
+                    </div>
+
+                    <!-- Right Slide Text Message Area Component -->
+                    <div class="curtain-message curtain-msg-right">
+                        <h2>prime blitz</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                        <label for="auth-panel-switcher" class="curtain-toggle-btn">Go To Sign In</label>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+<!-------------------------------------- end of sign in sig up---------------------------------------------------- -->
+
+    <!-- start body here -->
+     <!--||||||||||||||||||||||||||||| back to top button|||||||||||||||||||||||| -->
+<a href="#top" class="back-to-top">↑</a> 
+
+
+
+
+<!-- ------------------------------Start of Hero------------------------------------------------------ -->
+<section class="prime-hero">
+  <div class="prime-hero-container">
+
+    <!-- Top Blue Badge Box -->
+    <div class="prime-badge-box">
+      <span class="prime-badge-text">What is reliable transport system ?</span>
+    </div>
+
+    <!-- Main Grey Body Card -->
+    <div class="prime-hero-card">
+      <div class="prime-hero-body">
+        <h1 class="prime-hero-title">Problems</h1>
+        <h2 class="prime-hero-subtitle">Solution</h2>
+        <p class="prime-hero-description">Result and Improvements</p>
+      </div>
+
+      <!-- Action Button Container -->
+      <div class="prime-hero-actions">
+        <a href="1.problems-elderly.html" class="prime-btn">Problems</a>
+      </div>
+
+       <div class="prime-hero-actions">
+        <a href="5.solutions-hybrid.html" class="prime-btn">Solutions</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- -----------------------------------------End of hero--------------------------------------------- -->
+
+<!-- ------------------------------------------start of 2nd sec----------------------------------------- -->
+<section class="comparison-preview-section">
+    <div class="comparison-container">
+        
+        <!-- Section Header -->
+        <div class="comparison-header">
+            <span class="comparison-badge">Main</span>
+            <h2>Problem & Solution</h2>
+        </div>
+
+        <!-- Comparison Cards Grid -->
+        <div class="comparison-grid">
+            
+            <!-- Card 1 -->
+            <div class="comparison-card">
+                <div class="comparison-card-header">
+                    <h3>Main-Problem 1</h3>
+                    <span class="diff-tag"><i class="fa-solid fa-list-check"></i></span>
+                </div>
+                <div class="comparison-card-body">
+                    <div class="compare-side comic-side">
+                        <span class="side-label">Problem</span>
+                        <p>Elderly passengers may struggle with digital tickets,
+                            mobile apps and online transport information.</p>
+                    </div>
+                    <div class="compare-divider">=</div>
+                    <div class="compare-side show-side">
+                        <span class="side-label">Solution</span>
+                        <p> Keep physical options such as cash, smart cards, tickets and staffed service points alongside digital services.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="comparison-card">
+                <div class="comparison-card-header">
+                    <h3>Main-Problem 2</h3>
+                    <span class="diff-tag"><i class="fa-solid fa-list-check"></i></span>
+                </div>
+                <div class="comparison-card-body">
+                    <div class="compare-side comic-side">
+                        <span class="side-label">Problem</span>
+                        <p>People with disabilities can face inaccessible vehicles, limited space and difficulties using transport services.</p>
+                    </div>
+                    <div class="compare-divider">=</div>
+                    <div class="compare-side show-side">
+                        <span class="side-label">Solution</span>
+                        <p>Provide accessible spaces, suitable vehicle support and practical assistance for passengers with disabilities.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Link to Full Page -->
+      
+
+    </div>
+</section>
+<!-- ----------------------------------------------end of 2nd sec--------------------------------------------------- -->
+
+
+
+<!-- ----------------------------------------------------end of big carousel aka 3rd sec---------------------------------------------- -->
+
+<!-- ---------------------------------------------------start of 4rd sec --------------------------------------------------------------- -->
+<section class="variants-section">
+    <div class="variants-container">
+        
+        <div class="variants-header">
+            <span class="variants-badge">Indigo-City3</span>
+            <h2>Problem & Solution</h2>
+            <p>You can select to see more about Problem or Solution.</p>
+        </div>
+
+        <div class="variants-grid">
+            <a href="1..problems-elderly.html" class="variant-card">
+                <div class="variant-info"><h3>PROBLEM 01</h3><span class="variant-tag"><i class="fa-solid fa-circle-xmark"></i></span></div>
+            </a>
+            <a href="2.problems-disability.html" class="variant-card">
+                <div class="variant-info"><h3>PROBLEM 02</h3><span class="variant-tag"><i class="fa-solid fa-circle-xmark"></i></span></div>
+            </a>
+            <a href="4.problems-digital.html" class="variant-card">
+                <div class="variant-info"><h3>PROBLEM 03</h3><span class="variant-tag"><i class="fa-solid fa-circle-xmark"></i></span></div>
+            </a>
+            <a href="5.solutions-hybrid.html" class="variant-card">
+                <div class="variant-info"><h3>PROBLEM 04</h3><span class="variant-tag"><i class="fa-solid fa-circle-xmark"></i></span></div>
+            </a>
+
+
+
+            <a href="5.solutions-hybrid.html" class="variant-card">
+                <div class="variant-info"><h3>SOLUTION 01</h3><span class="variant-tag"><i class="fa-solid fa-circle-check"></i></span></div>
+            </a>
+            <a href="6.solutions-accessibility.html" class="variant-card">
+                <div class="variant-info"><h3>SOLUTION 02</h3><span class="variant-tag"><i class="fa-solid fa-circle-check"></i></span></div>
+            </a>
+            <a href="7.solutions-language.html" class="variant-card">
+                <div class="variant-info"><h3>SOLUTION 03</h3><span class="variant-tag"><i class="fa-solid fa-circle-check"></i></span></div>
+            </a>
+            <a href="8.solutions-website.html" class="variant-card">
+                <div class="variant-info"><h3>SOLUTION 04</h3><span class="variant-tag"><i class="fa-solid fa-circle-check"></i></span></div>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ------------------------------------------------------------end of 4rd sec------------------------------------------------- -->
+
+<!-- ----------------------------------------------start of abt sec----------------------------------------------------------- -->
+
+<!-- ------------------------------------------end of abt sec------------------------------------------------------------ -->
+
+<!-- ---------------------------------------start of faq------------------------------------------------------ -->
+<section class="content-section faq-section" id="section-5">
+    <div class="faq-wrapper">
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-subtitle">Got questions? We've got answers. Explore our core FAQs below.</p>
+        
+        <div class="faq-accordion">
+            <details class="faq-item">
+                <summary>What is the main transport problem in Indigo?</summary>
+                <p>Some passengers may have difficulty using digital transport services, while others may face accessibility problems.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Why does Indigo need a hybrid transport system?</summary>
+                <p>A hybrid system gives passengers both digital and physical options, so they can choose the service that works best for them.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How can elderly passengers be supported?</summary>
+                <p>Physical tickets, cash payments, smart cards and staffed service points can help elderly passengers who may struggle with the digital systems.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How can people with disabilities be supported?</summary>
+                <p>Accessible spaces, suitable vehicle support and practical assistance can make public transport easier and safer to use.</p>
+            </details>
+        </div>
+    </div>
+</section>
+<!-- ----------------------------------------------------------------end of faq---------------------------------------------- -->
+
+<!-- ----------------------------------------------------start of feedback------------------------------------------------- -->
+
+<section class="content-section feedback-input-section" id="section-feedback">
+    <div class="feedback-container">
+        <h2>We Value Your Feedback</h2>
+        <p class="section-subtitle">Let us know your experice for Prime-Blitz</p>
+        
+        <form action="#" method="POST" class="pure-feedback-form">
+            <div class="form-group">
+                <label for="feedbackName">Your Name</label>
+                <input type="text" id="feedbackName" placeholder="Enter your name" required autocomplete="name">
+            </div>
+            
+            <div class="form-group">
+                <label for="feedbackEmail">Email Address</label>
+                <input type="email" id="feedbackEmail" placeholder="name@example.com" required autocomplete="email">
+            </div>
+            
+            <div class="form-group">
+                <label for="feedbackRating">Rating</label>
+                <select id="feedbackRating" required>
+                    <option value="" disabled selected>Select a rating</option>
+                    <option value="5">★★★★★ (5/5)</option>
+                    <option value="4">★★★★☆ (4/5)</option>
+                    <option value="3">★★★☆☆ (3/5)</option>
+                    <option value="2">★★☆☆☆ (2/5)</option>
+                    <option value="1">★☆☆☆☆ (1/5)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="feedbackMessage">Your Message</label>
+                <textarea id="feedbackMessage" rows="5" placeholder="Share your thoughts, suggestions, or report issues..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit-feedback">Send Feedback</button>
+        </form>
+    </div>
+</section>
+
+<!-- END OF ABOUT CAROUSEL SECTION -->
+
+
+<!-- END OF BOOTSTRAP MULTI-CARD CAROUSEL -->
+
+
+
+<!-- -------------------end of feed back |  main content  | nav  | ------------------------------------------- -->
+
+<!-- -------------------------------------------------start of footer----------------------------- -->
+    <!-- Footer -->
+      <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="img1/id3_text.webp" alt="Prime Blitz Logo" class="footer-logo" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
+                <p>
+                    INDIGO CITY 3 is an educational research initiative highlighting the core challenges and solutions in modern public transit. We present strategies for building inclusive, hybrid digital transport systems that accommodate all passengers, including seniors and people with disabilities.
+                </p>
+                <p><strong>Contact</strong>: toet76322@gmail.com</p>
+                <p><strong>Phone</strong> 09 23055331</p>
+                <a href="#top">Back to top</a>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h3>Explore</h3>
+                    <a href="5.solutions-hybrid.html">Solution-1</a>
+                    <a href="6.solutions-accessibility.html">Solution-2</a>
+                    <a href="7.solutions-language.html">Solution-3</a>
+                    <a href="8.solutions-website.html">Solution-4</a>
+                </div>
+                <div id="faq">
+                    <h3>More</h3>
+                    <a href="1.problems-elderly.html">Problem-1</a>
+                    <a href="2.problems-disability.html">Problem-2</a>
+                    <a href="3.problems-lip.html">Problem-3</a>
+                    <a href="4.problems-digital.html">Problem-4</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

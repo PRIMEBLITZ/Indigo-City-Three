@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDIGO CITY 3 | About</title>
+<!-- ----------------------Link---------------------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- -----------------------------------CSS---------------------------- -->
+    <link rel="stylesheet" href="css/nav-sidebar.css">
+    <link rel="stylesheet" href="css/sign-in-up.css">
+    <link rel="stylesheet" href="extra-css/back-to-top.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/footer.css">
+<!-- ---------------------------------------Web Fav Icon--------------------- -->
+    <link rel="shortcut icon" href="img1/id_circle.webp" type="image/x-icon">
+</head>
+
+
+<!-- ------------------------------Start of Main----------------------------------- -->
+
+<body id="top">
+    <input type="checkbox" id="sidebar-toggle">
+    <label for="sidebar-toggle" class="overlay"></label>
+    <header class="prime-navbar">
+
+        <!-- ----------------------------logo--------------------------------- -->
+        <a href="index.html" class="logo">
+            <img src="img1/id3_text.webp" alt="Prime Blitz logo" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
+            <!-- <span class="brand-name">Prime Blitz</span> -->
+        </a>
+        <!-- --------------------------end of logo------------------------------ -->
+
+        <!-------------------------------- Desktop Search Bar---------------------------------- -->
+        <form action="#" method="GET" class="search-box desktop-search">
+            <input type="search" placeholder="Search..." name="search" required>
+            <button type="submit" aria-label="Submit Search Query">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <!-- -------------------------------end of desktop search bar-------------------------- -->
+
+        <!-- ----------------------------Desktop Navigation Links ------------------------------>
+        <ul class="desktop-menu">
+            <li><a href="index.html" >Home</a></li>
+            <li class="prime-dropdown">
+                <a> Solutions<i class="fa-solid fa-angle-down"></i></a>
+                <ul class="prime-dropdown-content">
+                    <li><a href="5.solutions-hybrid.html">Solution-1</a></li>
+                    <li><a href="6.solutions-accessibility.html">Solution-2</a></li>
+                    <li><a href="7.solutions-language.html">Solution-3</a></li>
+                    <li><a href="8.solutions-website.html">Solution-4</a></li>
+                    
+                </ul>
+            </li>
+            <li class="prime-dropdown">
+                <a>Problems <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="prime-dropdown-content">
+                    <li><a href="1.problems-elderly.html">Problem-1</a></li>
+                    <li><a href="2.problems-disability.html">Problem-2</a></li>
+                    <li><a href="3.problems-lip.html">Problem-3</a></li>
+                    <li><a href="4.problems-digital.html">Problem-4</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="aim.html">Aim</a></li>
+
+        </ul>
+          <!-- -----------------------------------end of desktop navi link---------------------- -->
+
+        <!-- -----------------------Top Right Nav Auth Trigger Icon (Desktop)--------------------- -->
+        <div class="auth-container">
+            <button commandfor="auth-overlay-panel" command="show-popover" class="auth-trigger-btn" title="Log In / Sign Up">
+                <i class="fa-solid fa-circle-user" style="font-size: 2.2rem;"></i>
+            </button>
+        </div>
+        <!-- -------------------------End of Top Right Nav Auth Trigger ------------------------------>
+
+        <!-- ---------------------Hamburger Icon Menu Trigger (Mobile)------------------------ -->
+        <label for="sidebar-toggle" class="open-btn" aria-label="Open Mobile Menu Drawer">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <!-- ----------------------------End of Ham Icon------------------------------------------ -->
+    </header>
+   <!-- --------------------------------end of laptop nav view--------------------------------- -->
+
+
+
+   <!---------------------- -------------Mobile Drawer Sidebar---------------------- -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <label for="sidebar-toggle" class="close-btn" aria-label="Close Mobile Menu Drawer">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+ <button commandfor="auth-overlay-panel" command="show-popover" class="mobile-auth sidebar-auth-trigger" title="Log In / Sign Up">
+                <i class="fa-solid fa-circle-user" style="font-size: 2.8rem;"></i>
+            </button>
+            <!-- ----------------------Mobile Sign IN | UP ------------------------------ -->
+         
+        </div>
+        
+        <!-- ----------------------------Mobile Search Bar -------------------------->
+        <form action="#" method="GET" class="mobile-search">
+            <input type="search" placeholder="Search website..." name="search" required>
+            <button type="submit" aria-label="Submit Search Query">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <!------------------------------ Mobile Drawer Navigation Links----------------------------- -->
+        <header class="sidebar-nav">
+            <a href="index.html">Home</a>
+            <details class="mobile-dropdown">
+                <summary>Solutions</summary>
+                <div class="mobile-dropdown-content">
+                    <a href="5.solutions-hybrid.html">Solution-2</a>
+                     <a href="6.solutions-accessibility.html">Solution-2</a>
+                    <a href="7.solutions-language.html">Solution-2</a>
+
+                     <a href="8.solutions-website.html">Solution-2</a>
+   
+                </div>
+            </details>
+
+            <details class="mobile-dropdown">
+                <summary>Problems</summary>
+                <div class="mobile-dropdown-content">
+                    <a href="1.problems-elderly.html">Problem-1</a>
+                    <a href="2.problems-disability.html">Problem-2</a>
+                    <a href="3.problems-lip.html">Problem-3</a>
+                    <a href="4.problems-digital.html">Problem-4</a>
+                </div>
+            </details>
+
+            <a href="about.html" class="active">About</a>
+            <a href="aim.html">Aim</a>
+          
+        </header>
+    </aside>
+<!-- ---------------------------------------------End of mobile nav aka side bar-------------------------------------- -->
+
+
+<!----------------------------------------- start of sign in up--------------------------------------------------------------- -->
+ 
+    <main id="auth-overlay-panel" popover class="auth-page-wrapper">
+        
+        <button popovertarget="auth-overlay-panel" popovertargetaction="hide" class="modal-close-cross" aria-label="Close Authentication Panel">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Hidden Checkbox for Form Switch Slide Animation Toggle -->
+        <input type="checkbox" id="auth-panel-switcher" class="auth-toggle-trigger">
+        
+        <div class="auth-display-card">
+            
+            <div class="auth-forms-holder">
+                
+                <!-- Registration  Sign Up Form Panel  -->
+                <form action="#" method="get" class="auth-form-column side-signup">
+                    <div class="form-content-wrapper">
+                        <h1 class="auth-heading">Create Account</h1>
+                        <p class="auth-lead">Register an email for Prime-Blitz</p>
+                        
+                        <div class="auth-core-form">
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Full Name</label>
+                                <input type="text" placeholder="Your name" required autocomplete="name">
+                            </div>
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Email Address</label>
+                                <input type="email" placeholder="name@example.com" required autocomplete="email">
+                            </div>
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Password</label>
+                                <input type="password" placeholder="Create strong password" required autocomplete="new-password">
+                            </div>
+                            <button type="submit" class="auth-btn btn-dark">Sign Up</button>
+                        </div>
+                        
+                        <!-- Mobile Responsive Alternative Switch Trigger Link -->
+                        <div class="auth-mobile-switch-notice">
+                            <p>Already have an account? <label for="auth-panel-switcher" class="auth-action-link">Sign In</label></p>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Session Authentication Sign In Form Panel -->
+                <form action="#" method="get" class="auth-form-column side-signin">
+                    <div class="form-content-wrapper">
+                        <h1 class="auth-heading">Welcome Back</h1>
+                        <p class="auth-lead">Sign in to your account to access your workspace portal.</p>
+                        
+                        <div class="auth-core-form">
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Email Address</label>
+                                <input type="email" placeholder="name@example.com" required autocomplete="email">
+                            </div>
+                            <div class="auth-input-row">
+                                <div class="auth-label-split">
+                                    <label class="auth-field-label">Password</label>
+                                    <a href="#" class="auth-inline-link">Forgot password?</a>
+                                </div>
+                                <input type="password" placeholder="Enter your password" required autocomplete="current-password">
+                            </div>
+                            <button type="submit" class="auth-btn btn-blue">Sign In</button>
+                        </div>
+                        
+                        <!-- Mobile Responsive Alternative Switch Trigger Link -->
+                        <div class="auth-mobile-switch-notice">
+                            <p>Don't have an account? <label for="auth-panel-switcher" class="auth-action-link">Sign Up</label></p>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <!-- Sliding Desktop Interactive Visual Curtain Panel Layer -->
+            <div class="auth-overlay-curtain">
+                <div class="auth-curtain-inner">
+                    
+                    <!-- Left Slide Text Message Area Component -->
+                    <div class="curtain-message curtain-msg-left">
+                        <h2>Prime blitz</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                        <label for="auth-panel-switcher" class="curtain-toggle-btn">Go To Sign Up</label>
+                    </div>
+
+                    <!-- Right Slide Text Message Area Component -->
+                    <div class="curtain-message curtain-msg-right">
+                        <h2>prime blitz</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                        <label for="auth-panel-switcher" class="curtain-toggle-btn">Go To Sign In</label>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+<!-------------------------------------- end of sign in sig up---------------------------------------------------- -->
+
+    <!-- start body here -->
+     <!--||||||||||||||||||||||||||||| back to top button|||||||||||||||||||||||| -->
+<a href="#top" class="back-to-top">↑</a> 
+
+
+<section id="about-hero" class="prime-section about-hero-section">
+            <div class="prime-container about-hero-grid">
+                <div class="about-hero-content">
+                    <span class="prime-badge">About Indigo City</span>
+                    <h1 class="prime-title">Building Better Transport for Everyone</h1>
+                    <p class="prime-text">Indigo City is a smart city project that focuses on making public transport easier, fairer, and more accessible for different types of passengers.</p>
+                    <p class="prime-text">Our Smart Hybrid Transport System combines digital services with physical options, so passengers can choose the method that works best for them.</p>
+                </div>
+                <div class="about-hero-media prime-box">
+                    <img src="img1/id_circle.webp" alt="About Us Visual" class="prime-aim-img">
+                </div>
+            </div>
+        </section>
+
+
+<section class="about-section py-5 position-relative">
+  <div class="container">
+    
+    <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="4000">
+      
+      <!-- Slide Indicators -->
+      <div class="carousel-indicators custom-indicators mb-0">
+        <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+
+      <!-- Slide Wrapper -->
+      <div class="carousel-inner">
+        
+        <!-- Slide 1 (ONLY THIS ONE IS ACTIVE) -->
+        <div class="carousel-item active">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5 text-center">
+              <div class="custom-border-wrap">
+                <img src="img1/toe.jpg" alt="Profile Avatar" class="profile-img">
+                <img src="img1/border.webp" alt="Border Frame" class="border-overlay">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="content-card ps-lg-4">
+                <span class="sub-heading">Leader</span>
+                  <span class="sub-heading">Front-End Developer</span>
+                <span class="sub-heading">Designer</span>
+
+                <h2 class="fw-bold display-6 my-2">Tha Toe Thi Ha <i class="fa-solid fa-crown"></i></h2>
+                <p class="lead fs-6">
+                Founder of the Indigo City project and leader of the team.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5 text-center">
+              <div class="custom-border-wrap">
+                <img src="img1/shan.jpg" alt="Profile Avatar" class="profile-img">
+                <img src="img1/border.webp" alt="Border Frame" class="border-overlay">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="content-card ps-lg-4">
+                <span class="sub-heading">Front-end Developer</span>
+                                <span class="sub-heading">Main Researcher</span>
+                <span class="sub-heading">Designer</span>
+
+                <h2 class="fw-bold display-6 my-2">Shan Phyo Htet <i class="fa-solid fa-crown"></i></h2>
+                <p class="lead fs-6">
+                Main researcher responsible for finding the main problems and developing suitable solutions for the project.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5 text-center">
+              <div class="custom-border-wrap">
+                <img src="img1/han.png" alt="Profile Avatar" class="profile-img">
+                <img src="img1/border.webp" alt="Border Frame" class="border-overlay">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="content-card ps-lg-4">
+                <span class="sub-heading">Researcher</span>
+                <h2 class="fw-bold display-6 my-2">Han Phone Pyae Sone</h2>
+                <p class="lead fs-6">
+                 Researcher responsible for collecting information and designing the presentation slides.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5 text-center">
+              <div class="custom-border-wrap">
+                <img src="img1/khine.jpg" alt="Profile Avatar" class="profile-img">
+                <img src="img1/border.webp" alt="Border Frame" class="border-overlay">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="content-card ps-lg-4">
+                <span class="sub-heading">Researcher | Slide Designer</span>
+                <h2 class="fw-bold display-6 my-2">Khine Thet Htar San</h2>
+                <p class="lead fs-6">
+                 Researcher who helped collect information and design the presentation slides.
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="carousel-control-prev about-ctrl-btn" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next about-ctrl-btn" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+
+  </div>
+</section>
+<!-- skip -->
+
+        <!-- SECTION 2: Mission & Vision -->
+        <section id="mission-vision" class="prime-section about-mv-section">
+            <div class="prime-container">
+                <div class="prime-grid prime-grid-2">
+                    <div class="prime-box prime-card about-mv-card">
+                        <div class="prime-card-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <h2 class="prime-subtitle">Our Mission</h2>
+                        <p class="prime-card-text">Our mission is to create a public transport system that is simple, accessible, and convenient for everyone.</p>
+                        <p class="prime-card-text">We aim to support both digital and physical transport options so that passengers can choose the method that suits their needs.</p>
+                    </div>
+                    <div class="prime-box prime-card about-mv-card">
+                        <div class="prime-card-icon"><i class="fa-solid fa-eye"></i></div>
+                        <h2 class="prime-subtitle">Our Vision</h2>
+                        <p class="prime-card-text">Our vision is to create a modern and inclusive transport system where technology improves the experience without leaving people behind.</p>
+                        <p class="prime-card-text">We want Indigo City to provide reliable transport services for elderly people, people with disabilities, low-income passengers, and other members of the community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Core Values -->
+        <section id="core-values" class="prime-section about-values-section">
+            <div class="prime-container">
+                <div class="prime-section-header">
+                    <h2 class="prime-subtitle">Our Core Values</h2>
+                    <p class="prime-section-desc">Our project focuses on creating transport that is accessible, practical, and useful for the whole community.</p>
+                </div>
+                <div class="prime-grid prime-grid-3">
+                    <div class="prime-box prime-card text-center">
+                        <div class="prime-card-icon mx-auto"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h3 class="prime-card-title">Innovation</h3>
+                        <p class="prime-card-text">We use smart technology to make public transport more convenient and efficient.</p>
+                    </div>
+                    <div class="prime-box prime-card text-center">
+                        <div class="prime-card-icon mx-auto"><i class="fa-solid fa-handshake"></i></div>
+                        <h3 class="prime-card-title">Accessibility</h3>
+                        <p class="prime-card-text">We support different payment and service options so more people can use public transport comfortably.</p>
+                    </div>
+                    <div class="prime-box prime-card text-center">
+                        <div class="prime-card-icon mx-auto"><i class="fa-solid fa-users"></i></div>
+                        <h3 class="prime-card-title">Community</h3>
+                        <p class="prime-card-text">We consider the needs of different passengers and work toward a transport system that benefits the whole community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- ------------------------------Start of Hero------------------------------------------------------ -->
+
+ 
+<!-- -------------------end of feed back |  main content  | nav  | ------------------------------------------- -->
+
+      <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="img1/id3_text.webp" alt="Prime Blitz Logo" class="footer-logo" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
+                <p>
+                    INDIGO CITY 3 is an educational research initiative highlighting the core challenges and solutions in modern public transit. We present strategies for building inclusive, hybrid digital transport systems that accommodate all passengers, including seniors and people with disabilities.
+                </p>
+                <p><strong>Contact</strong>: toet76322@gmail.com</p>
+                <p><strong>Phone</strong> 09 23055331</p>
+                <a href="#top">Back to top</a>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h3>Explore</h3>
+                    <a href="5.solutions-hybrid.html">Solution-1</a>
+                    <a href="6.solutions-accessibility.html">Solution-2</a>
+                    <a href="7.solutions-language.html">Solution-3</a>
+                    <a href="8.solutions-website.html">Solution-4</a>
+                </div>
+                <div id="faq">
+                    <h3>More</h3>
+                    <a href="1.problems-elderly.html">Problem-1</a>
+                    <a href="2.problems-disability.html">Problem-2</a>
+                    <a href="3.problems-lip.html">Problem-3</a>
+                    <a href="4.problems-digital.html">Problem-4</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
